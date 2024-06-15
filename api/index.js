@@ -4,7 +4,7 @@ require('dotenv').config();
 const Transaction = require('./models/Transaction.js');
 const mongoose = require("mongoose")
 const app = express();
-const port = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json());
@@ -26,6 +26,6 @@ app.get('/api/transaction', async (req, res) => {
     res.json(transactions);
   })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
 })
